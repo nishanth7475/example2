@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WEB APPLICATION</title>
+	<style type="text/css">
+
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#header>h1{
+		padding:12px;
+		width:1024px;
+		margin: 0px auto;
+		color: white; 
+	}
+#nav ul{
+		
+		background-color: #ccc;
+		padding: 0 10px;
+		list-style: none;
+		position:relative; 
+		display: inline-table;
+		line-height: 30px;
+	}
+	#nav ul:after{
+		content: "";
+		clear:both;
+		display: block;
+	}
+	#nav ul li{
+		float: left;
+	}
+#nav ul li a{
+	display: block;
+	padding: 3px 5px;
+	color: red;
+	text-decoration: none;
+	text-align: center;
+	height: 25px;
+	width: 250px;
+}
+#nav ul li:hover{
+	background: #4b545f;
+
+}
+
+#nav ul li:hover a{
+	color: #fff;
+}
+#nav ul ul{
+	display: none;
+	background: #5f6975;
+	position: absolute;
+	top: 100%;
+}
+#nav ul li:hover>ul{
+	display: block;
+}
+#nav ul ul li{
+	float: none;
+	border-top: 3px solid #fff;
+	border-bottom: 3px solid #fffffa;
+}
+#nav ul ul li a{
+	padding: 5px 8px;
+	color: #FFF;
+}
+#nav ul ul li a:hover{
+	background: #4b544f;
+}
+#section {
+    width:350px;
+    float:left;
+    padding:10px; 
+}
+*#hero{
+	width:1180px;
+    padding:8px;
+    min-height:480px;
+    background-color: white;
+    margin: 10px auto;
+    position: relative;
+}
+#slider{
+	width: 1250px; height:500px;
+	position: relative;
+	overflow: hidden;
+
+}
+#next{
+	text-align: center;
+	line-height: 50px;
+	color: white;
+	width: 50px; height: 50px;
+	background-color: red;
+	position: absolute;
+	top: 225px;
+	right: 0;
+	z-index: 99;
+	cursor: pointer;
+	opacity: 0;
+}
+#prev{
+	text-align: center;
+	line-height: 50px;
+	color: white;
+	width: 50px; height: 50px;
+	background-color: red;
+	position: absolute;
+	top: 225px;
+	left: 0;
+	z-index: 99;
+	cursor: pointer;
+	opacity: 0;
+}
+#hero:hover #next{
+	opacity: 1;
+	webkit-transition:all .5s ease-out;
+	-webkit-transition:all .5s ease-out;
+}
+#hero:hover #prev{
+	opacity: 1;
+	webkit-transition:all .5s ease-out;
+	-webkit-transition:all .5s ease-out;
+}
+#container{
+	height: 500px;
+
+}
+.one{
+	line-height: 50px;
+	font-size: 30px;
+	color: red;
+}
+#section{
+	font-size: 20px;
+}
+
+</style>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
+<script type="text/javascript" src="jquery-2.1.4.js"></script>
+<!-- <script type="text/javascript" src="jquery.jclock.js"></script> -->
+<script type="text/javascript" src="jquery.cycle.all.js"></script>
+<script type="text/javascript">
+// $("#jclock").jclock();
+
+
+
+
+$('#slider').cycle({
+			fx:   'scrollHorz',
+			next:  '#next',
+			prev:   '#prev',
+		
+		});
+
+	</script>
+	
+</head>
+<body>
+<div id="header">
+<h1>SET WEB APLLICATION</h1>
+</div>
+
+<div id="nav">
+	<ul>
+	<li align=><a href ="#">HOME</a>
+	<ul>
+		<li><a href="#">XHTML</a></li>
+		<li><a href="#">CSS</a></li>
+		<li><a href="#">XML</a></li>
+		<li><a href="#">XSL</a></li>
+	</ul>
+	</li>
+	<li><a href ="#" >SET DETAILS</a>
+	<ul>
+	<li><a href="#">Add Individual Details</a></li>
+		<li><a href="#">Add Behavioural Strenghts</a></li>
+		<li><a href="#">Add Achievements</a></li>
+		<li><a href="#">Add SET Anchor Points</a></li>
+		<li><a href="#">ADO</a></li>
+		</ul>
+	</li>
+	<li><a href ="#" >CHANGE PASSWORD</a></li>
+	<li><a href ="#">CONTACT US</a></li>
+	<li><a href ="login.html" >LOGIN</a>
+	<ul>
+	<li><a href="#">Logoff</a></li>
+	</ul>
+
+	</li>
+</ul>
+<div>
+	<h1>Web Application:</h1>
+	<p style="font-size:20px;">In computing, a web application or web app is a client-server software application in which the client (or user interface) runs in a web browser.Web applications are popular due to the ubiquity of web browsers, and the convenience of using a web browser as a client to update and maintain web applications without distributing and installing software on potentially thousands of client computers is a key reason for their popularity, as is the inherent support for cross-platform compatibility. Common web applications include webmail, online retail sales, online auctions, wikis, instant messaging services and many other functions.</p>
+</div>
+</div>
+<div id="hero">
+<div id="next">&rang;</div>
+<div id="prev">&lang;</div>
+<div id="slider">
+<img src="images/2.jpg">
+<img src="images/8.jpg"  >
+<img src="images/7.jpg" >
+</div>
+</br>
+<div id="container">
+<div id="section">
+<MARQUEE direction="up" height="200">SET Induction phase is very IMP phase in L&T Infotech Ltd.<BR>We are having This SET Induction devided into 3 modules.</MARQUEE>
+<h1>Gyanpeeth</h1>
+<p>In todays world we belive in self-Learning. To give better idea about latest technologies, for SET's we have online courses on various technologies.</p>
+</div>
+<div id="aside">
+</br>
+</br>
+</br>
+</br>
+<h1>About SET Induction Program</h1>
+<a href="" class="one">Objectives</a><br>
+			<a href="" class="one">Course Material</a><BR>
+			<a href="Sampletest.html" class="one">Sample tests<br></a>
+			<a href="" class="one">Schedule<br></a>
+			<a href="" class="one">Certifications<br></a>
+
+</div>
+</div>
+
+</body>
+</html>

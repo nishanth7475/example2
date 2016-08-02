@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<style type="text/css">
+	body{
+		font-family: arial;
+		font-size: 15px;
+		line-height: 1.6em;
+		background: white;
+	}
+	li{
+		list-style: none;
+	}
+	.container{
+		width:70%;
+		margin: 20px auto;
+		overflow: auto;
+	}
+	.pull-left{float: left;}
+	.pull-left{float: left;}
+
+	header{
+		background: gray;
+		color: red;
+		padding: 5px 10px;
+		overflow: auto;
+	}
+	footer{
+		background: gray;
+		color: red;
+		padding: 5px 10px;
+		overflow: auto;
+	}
+	</style>
+</head>
+<body>
+<div id="container"></div>
+<header>
+	<div class="pull-left">SAMPLE QUIZ</div>
+</header>
+<main>
+<form class="questionFrom" id="q1" data-question="1">
+<h3>1.A JavaScript must reside within the</h3>
+<ul>
+	<li><INPUT type=radio name="q1" value=0>&lt;object&gt;tag</li>
+	<li><INPUT type=radio name="q1" value=0>&lt;object&gt;tag</li>
+	<li><INPUT type=radio name="q1" value=0>&lt;object&gt;tag</li>
+	<li><INPUT type=radio name="q1" value=0>&lt;object&gt;tag</li>
+</ul>
+<button id="submit">submit</button>
+
+	
+</form>
+<form class="questionFrom" id="q2" data-question="2">
+<h3>2.write() is a type of</h3>
+<ul>
+	<li><INPUT type=radio name="q2" value="a">Object</li>
+	<li><INPUT type=radio name="q2" value="b">Method</li>
+	<li><INPUT type=radio name="q3" value="c">Property</li>
+	<li><INPUT type=radio name="q4" value="d">Variable</li>
+</ul>
+<button id="submit">submit</button>
+
+	
+</form>
+<form class="questionFrom" id="q3" data-question="3">
+<h3>3.A dot is used to</h3>
+<ul>
+	<li><INPUT type=radio name="q3" value="a">Identify a JavaScript comment</li>
+	<li><INPUT type=radio name="q3" value="b">Separate lines of JavaScript</li>
+	<li><INPUT type=radio name="q3" value="c">End of JavaScriptScript</li>
+	<li><INPUT type=radio name="q3" value="d">Separate an object name from either a property or a method</li>
+</ul>
+<button id="submit">submit</button>
+
+	
+</form>
+<form class="questionFrom" id="q4" data-question="4">
+<h3>4.True or False This is the first element of the product array
+
+product[1]</h3>
+<ul>
+	<li><INPUT type=radio name="q4" value="a">True</li>
+	<li><INPUT type=radio name="q4" value="b">False</li>
+	
+</ul>
+<button id="submit">submit</button>
+
+	
+</form>
+<form class="questionFrom" id="q5" data-question="5">
+<h3>5.How many elements are there in the array?
+
+products=new Array('teen','rose',pizza)</h3>
+<ul>
+	<li><INPUT type=radio name="q5" value="a">1</li>
+	<li><INPUT type=radio name="q5" value="b">2</li>
+	<li><INPUT type=radio name="q5" value="c">3</li>
+	<li><INPUT type=radio name="q5" value="d">4</li>
+</ul>
+<button id="submit">submit</button>
+
+	
+</form>
+<div id="results"></div>
+</br>
+</main>
+<footer>
+	<div class="pull-left">Total: 5 Questions
+</footer>
+<script type="text/javascript" src="jquery-2.1.4.js"></script>
+<script type="text/javascript">
+var score=0;
+var total =5;
+var point =1;
+var highest =total * point;
+
+function int(){
+	sessionStorage.setItem('a1','b')
+	sessionStorage.setItem('a2','c')
+	sessionStorage.setItem('a3','d')
+	sessionStorage.setItem('a3','a')
+	sessionStorage.setItem('a4','b')
+}
+
+
+	$(document).ready(function(){
+		$('.questionFrom').hide();
+		$('#q1').show();
+		$('#q1 #submit').click(function(){
+			$('.questionFrom').hide();
+			process('q1');
+			$('#q2').fadeIn(300);
+			return false;
+
+		});
+		$('#q2 #submit').click(function(){
+			$('.questionFrom').hide();
+			process('q2');
+			$('#q3').fadeIn(300);
+			return false;
+
+		});
+		$('#q3 #submit').click(function(){
+			$('.questionFrom').hide();
+			process('q3');
+			$('#q4').fadeIn(300);
+			return false;
+
+		});
+		$('#q4 #submit').click(function(){
+			$('.questionFrom').hide();
+			process('q4');
+			$('#q5').fadeIn(300);
+			return false;
+
+		});
+		$('#q5 #submit').click(function(){
+			$('.questionFrom').hide();
+			process('q5');
+			$('#results').fadeIn(300);
+			return false;
+
+		});
+
+	});
+	function process(q){
+		if(q=="q1"){
+			var submitted=$('input[name=q1]:checked').val();
+		
+		if(submitted==sessionStorage.a1){
+			score++;
+		}
+
+	}
+	if(q=="q2"){
+			var submitted=$('input[name=q2]:checked').val();
+		if(submitted==sessionStorage.a2){
+			score++;
+		}
+	}
+	
+
+	
+	if(q=="q3"){
+			var submitted=$('input[name=q3]:checked').val();
+		if(submitted==sessionStorage.a3){
+			score++;
+		}
+	}
+	
+
+	
+	if(q=="q4"){
+			var submitted=$('input[name=q4]:checked').val();
+		if(submitted==sessionStorage.a4){
+			score++;
+		}
+	}
+
+	
+	if(q=="q5"){
+			var submitted=$('input[name=q5]:checked').val();
+		if(submitted==sessionStorage.a5){
+			score++;
+		}
+		$('#results').html('<h3>Your Final Score is: '+score+'out of 5</h3>');
+	}
+	return false;
+
+		
+	}
+	
+	
+
+	
+
+	
+
+	window.addEventListner('load'.int,false);
+</script>
+</body>
+</html>
